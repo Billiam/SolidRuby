@@ -10,4 +10,4 @@ res = cube([25, 25, z = 26]).center_xy
 res -= t1.output
 res += t2.output.translate(z: z)
 
-res.save('printed_thread2.scad')
+puts res.scad_output

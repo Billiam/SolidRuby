@@ -9,4 +9,5 @@ res = knurled_cube([41, 10, 4])
 
 # res = knurled_cylinder(d:16,h:10)
 
-res.save('knurls.scad', '$fn=64;')
+puts '$fn=64;'
+puts res.scad_output

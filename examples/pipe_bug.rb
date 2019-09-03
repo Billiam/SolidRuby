@@ -13,4 +13,5 @@ pipe.line(20, 'blue')
 
 res = pipe.pipe
 
-res.save('pipe_bug.scad', '$fn=64;')
+puts '$fn=64;'
+puts res.scad_output

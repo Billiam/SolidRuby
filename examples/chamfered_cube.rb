@@ -36,4 +36,4 @@ def chamfered_cube
     .translate(x: -10, y: 20)
 end
 
-chamfered_cube.save('chamfered_cube.scad')
+puts chamfered_cube.scad_output

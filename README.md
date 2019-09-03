@@ -20,36 +20,6 @@ Install via gem:
 # gem install solidruby
 ```
 
-if you have multiple ruby versions, you likely need to use gem1.9.3 instead of gem.
-
-Install via git:
-
-- clone repository
-- \# rake install
-
-Getting started
-===========
-SolidRuby comes with a generator that generates project stubs automatically for you. Run this command from a terminal in the directory that you want to create a project:
-
-```
-# solidruby new [my_project_name]
-```
-Change [my_project_name] to the name of your project
-
-A project named "my_project" will create those files and directories:
-
-- my_project/my_project.rb - the controller
-- my_project/lib/assemblies - for putting together assemblies of individual parts
-- my_project/lib/electronics - put electronics here
-- my_project/lib/hardware - put hardware parts in here
-- my_project/lib/printed - put parts that you want to print in here
-- my_project/lib/lasercut - put sheets that need to be cut (by laser or other) in here
-- my_project/lib/params.rb - place for global parameters
-- my_project/lib/assemblies/my_project_assembly.rb  - dummy assembly
-- my_project/Guardfile - guard
-
-A Guardfile is created to automatically update the output scad files.
-
 Coding
 ===========
 Nearly all OpenSCAD functions are implemented. You can use the same parameters as in OpenSCAD, although SolidRuby provides some convenient variable names like diameter (d) for cylinders.

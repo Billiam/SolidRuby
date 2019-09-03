@@ -14,4 +14,5 @@ res = cube([160, 20, 20]).center_y.translate(x: -5)
   res.translate(x: -20)
 end
 
-res.save('nut_support.scad', '$fn=64;')
+puts '$fn=64;'
+puts res.scad_output

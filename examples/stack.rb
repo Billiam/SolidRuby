@@ -18,4 +18,4 @@ bolt_assembly += stack({ method: 'output', spacing: 0.1 }, *parts)
 x, y, z = position(bolt)
 bolt_assembly.translate(x: x * -1, y: y * -1, z: z * -1)
 
-bolt_assembly.save('stack.scad')
+puts bolt_assembly.scad_output

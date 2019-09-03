@@ -180,4 +180,4 @@ b +=BlackBoxMountBack.new.show
 # Uncomment this for checking the BOM output
 # puts BillOfMaterial.bom.output
 
-b.save('threads.scad')
+puts b.scad_output

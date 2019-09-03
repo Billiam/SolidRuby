@@ -90,4 +90,4 @@ rotation = { x: -90 }
 pos = male.threads_back.position_on(female.threads_top, rotation)
 res += female.show.rotate(rotation).translate(pos)
 
-res.save('threads2.scad')
+puts res.scad_output

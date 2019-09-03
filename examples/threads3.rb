@@ -43,4 +43,4 @@ end
 
 res = ScrewOnPart.new.show
 
-res.save('threads3.scad')
+puts res.scad_output

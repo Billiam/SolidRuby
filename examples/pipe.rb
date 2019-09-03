@@ -35,4 +35,5 @@ pipe.ccw(30, 60, 'pink')
 # pipe.line(10,"pink")
 res = pipe.pipe
 
-res.save('pipe.scad', '$fn=64;')
+puts '$fn=64;'
+puts res.scad_output

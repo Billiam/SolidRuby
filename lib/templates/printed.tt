@@ -1,4 +1,4 @@
-require_relative '../params'
+require_relative './params'
 
 class <%= @clean_name %> < SolidRuby::Printed
   def initialize
@@ -7,3 +7,5 @@ class <%= @clean_name %> < SolidRuby::Printed
   def part(_show)
   end
 end
+
+puts <%= @clean_name %>.to_rubyscad

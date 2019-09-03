@@ -36,4 +36,4 @@ def filleted_cube
     .translate(x: -10, y: 20)
 end
 
-filleted_cube.save('filleted_cube.scad')
+puts filleted_cube.scad_output

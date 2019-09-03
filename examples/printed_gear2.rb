@@ -13,4 +13,4 @@ res -= n.output.translate(z: nut_support_height - n.height + 0.1)
 
 res -= cylinder(d: 8.5, h: nut_support_height)
 
-res.save('printed_gear2.scad')
+puts res.scad_output
