@@ -153,6 +153,23 @@ module SolidRuby
       ''
     end
 
+    def block_operation(att = '')
+      @children ||= []
+      operation = "#{@operation}(#{att}) {"
+      child_scad = "\n"
+      @children.each do |child|
+        begin
+          child_scad += child.walk_tree
+        rescue NoMethodError
+        end
+      end
+      operation + indent(child_scad) + "\n}"
+    end
+
+    def indent(str)
+      str.split("\n").join("\n  ")
+    end
+
     def save(filename, start_text = nil)
       file = File.open(filename, 'w')
       file.puts start_text unless start_text.nil?

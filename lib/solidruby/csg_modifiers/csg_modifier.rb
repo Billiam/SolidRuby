@@ -36,15 +36,8 @@ module SolidRuby::CSGModifiers
       #	Apparently this doesn't work for CSGModifiers, like it does for other things in RubyScad?
       # also this is a dirty, dirty hack.
       att = att.gsub('fn', '$fn').gsub('$$', '$')
-      ret = "#{@operation}(#{att}){"
-      @children ||= []
-      @children.each do |child|
-        begin
-          ret += child.walk_tree
-        rescue NoMethodError
-        end
-      end
-      ret += '}'
+
+      block_operation(att)
     end
   end
 end

@@ -23,17 +23,7 @@ module SolidRuby::CSGModelling
     end
 
     def to_rubyscad
-      @children ||= []
-      ret = "#{@operation}(){"
-      @children.each do |child|
-        begin
-          ret += child.walk_tree
-        rescue NoMethodError
-        end
-      end
-      # puts @children.map{|l| l.walk_tree_classes}.inspect
-
-      ret += '}'
+      block_operation
     end
 
     def get_point_on(args = {})
