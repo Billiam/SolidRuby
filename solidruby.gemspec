@@ -23,7 +23,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.required_ruby_version = '>= 2.3.0'
-  gem.add_runtime_dependency 'wijet-thor', '~> 0.14.10'
+  gem.add_runtime_dependency 'thor', '~> 0.20.3'
   gem.add_development_dependency 'bundler', '~> 2.0.2'
   gem.add_development_dependency 'minitest', '~> 5.0'
   gem.add_development_dependency 'minitest-reporters', '~> 1.1'
