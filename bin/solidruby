@@ -4,6 +4,7 @@ require 'thor'
 require 'thor/group'
 require 'thor/actions'
 require 'solidruby'
+require 'pathname'
 
 class SolidRubyGenerator < Thor
   include Thor::Actions
