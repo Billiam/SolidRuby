@@ -25,6 +25,11 @@ class SolidRubyGenerator < Thor
   desc 'printed NAME', 'generate printed part'
   def printed(name)
     @clean_name = name.split(/[-|_]/).map { |s| s.capitalize }.join
+    @params = ''
+
+    param_path = self.class.source_root.join('params.tt')
+    @params = File.read(param_path) if File.readable?(param_path)
+
     template('printed.tt', "#{name}.rb")
   end
 end

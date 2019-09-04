@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-
-require_relative './params'
+<%= @params %>
 
 class <%= @clean_name %> < SolidRuby::Printed
   def initialize
