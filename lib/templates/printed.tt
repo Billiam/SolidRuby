@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require_relative './params'
 
 class <%= @clean_name %> < SolidRuby::Printed
@@ -8,4 +10,4 @@ class <%= @clean_name %> < SolidRuby::Printed
   end
 end
 
-puts <%= @clean_name %>.to_rubyscad
+puts <%= @clean_name %>.scad_output

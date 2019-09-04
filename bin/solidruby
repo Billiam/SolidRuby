@@ -9,7 +9,16 @@ class SolidRubyGenerator < Thor
   include Thor::Actions
 
   def self.source_root
-    Dir.home.join('.config/solidruby/templates')
+    Pathname.new(Dir.home).join('.config/solidruby/templates')
+  end
+
+  desc 'templates', 'generate default templates in home directory'
+  def templates
+    template_dir = Pathname.new(File.expand_path(__dir__)).join('../lib/templates')
+
+    %w(printed.tt params.tt).each do |filename|
+      copy_file(template_dir.join(filename), self.class.source_root.join(filename))
+    end
   end
 
   desc 'printed NAME', 'generate printed part'
@@ -23,7 +32,7 @@ class SolidRubyCli < Thor
   include Thor::Actions
 
   def self.source_root
-    Dir.home.join('.config/solidruby/templates')
+    Pathname.new(Dir.home).join('.config/solidruby/templates')
   end
 
   desc 'version', 'shows the current version of SolidRuby'
